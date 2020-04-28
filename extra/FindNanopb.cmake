@@ -250,7 +250,7 @@ function(NANOPB_GENERATE_CPP SRCS HDRS)
     endif()
 
     # based on the version of protoc it might be necessary to add "/${FIL_PATH_REL}" currently dealt with in #516
-    set(NANOPB_OUT "${CMAKE_CURRENT_BINARY_DIR}")
+    set(NANOPB_OUT "${CMAKE_CURRENT_BINARY_DIR}/${FIL_PATH_REL}")
 
     # We need to pass the path to the option files to the nanopb plugin. There are two ways to do it.
     # - An older hacky one using ':' as option separator in protoc args preventing the ':' to be used in path.
